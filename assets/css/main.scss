@@ -1,0 +1,236 @@
+---
+# Jekyll needs this front matter to process the file
+---
+
+/* =====================================================
+   FONTS — Raleway (titles) + Mona Sans (body/posts)
+   ===================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("https://cdn.jsdelivr.net/gh/github/mona-sans@main/fonts/variable/Mona-Sans.var.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
+
+/* =====================================================
+   PALETTE — navy, not too dark, with pops of color
+   ===================================================== */
+ $background-color:      #0f2038;   // main navy
+ $text-color:            #e7eef8;   // soft off-white
+ $muted-text-color:      #9db1c9;
+ $primary-color:         #6cb2ff;   // bright sea blue
+ $border-color:          #22395c;
+
+ $link-color:            #7cc0ff;
+ $link-color-hover:      #ff8e72;   // coral pop on hover
+ $link-color-visited:    #b8a7ff;   // lavender
+
+ $code-background-color:      #0c1a30;
+ $code-background-color-dark: #0c1a30;
+ $form-background-color:      #0c1a30;
+ $search-background-color:    #0c1a30;
+ $footer-background-color:    #0b1730;
+ $masthead-link-color:        #c6d6ec;
+ $masthead-link-color-hover:  #ffd166;  // gold pop
+
+ $success-color: #7ae0c3;  // mint
+ $warning-color: #ffd166;  // gold
+ $danger-color:  #ff8e72;  // coral
+ $info-color:    #6cb2ff;  // sky
+
+/* Body text = Mona Sans everywhere */
+ $sans-serif: "Mona Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+ $serif:      $sans-serif;
+ $monospace:  "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
+
+/* =====================================================
+   THEME IMPORT — don't touch
+   ===================================================== */
+@import "minimal-mistakes";
+
+/* =====================================================
+   TITLES = Raleway
+   ===================================================== */
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.page__title,
+.archive__item-title {
+  font-family: "Raleway", "Mona Sans", sans-serif;
+}
+
+.site-title {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* =====================================================
+   CHROME — masthead, footer, selection, scrollbar
+   ===================================================== */
+.masthead {
+  background: linear-gradient(180deg, #0b1a33, #0f2038);
+  border-bottom: 1px solid $border-color;
+}
+
+.footer {
+  border-top: 1px solid $border-color;
+}
+
+::selection { background: #ff8e72; color: #0b1730; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0b1730; }
+::-webkit-scrollbar-thumb { background: #22395c; border-radius: 8px; }
+
+/* gradient divider */
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6cb2ff, #ff8e72, transparent);
+}
+
+/* =====================================================
+   HERO (index page) — fun graphics
+   ===================================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+  margin: 0 0 2.5rem;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  background:
+    radial-gradient(600px 300px at 85% -10%, rgba(108,178,255,.18), transparent 60%),
+    radial-gradient(500px 280px at -10% 110%, rgba(255,142,114,.15), transparent 60%),
+    linear-gradient(160deg, #12294a 0%, #0f2038 55%, #0d1b31 100%);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: .35;
+  pointer-events: none;
+  &.blob-1 { width: 220px; height: 220px; background: #6cb2ff; top: -60px; right: 8%;  animation: drift 9s ease-in-out infinite; }
+  &.blob-2 { width: 180px; height: 180px; background: #ff8e72; bottom: -50px; left: 6%; animation: drift 11s ease-in-out infinite reverse; }
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .8rem;
+  color: $muted-text-color;
+  margin-bottom: .5rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin: 0 0 .75rem;
+}
+
+.grad {
+  background: linear-gradient(90deg, #6cb2ff 0%, #b8a7ff 50%, #ff8e72 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-sub {
+  color: $muted-text-color;
+  max-width: 46rem;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.float-emoji {
+  position: absolute;
+  font-size: 1.6rem;
+  opacity: .8;
+  animation: bob 4.5s ease-in-out infinite;
+  &.e1 { top: 18%; left: 12%; animation-delay: 0s; }
+  &.e2 { top: 60%; right: 14%; animation-delay: 1.2s; }
+  &.e3 { top: 12%; right: 26%; animation-delay: 2.1s; }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.5s ease-in-out .4s infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50%      { transform: translate(18px, 14px) scale(1.06); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0); }
+  10%, 30%      { transform: rotate(14deg); }
+  20%, 40%      { transform: rotate(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob, .float-emoji, .wave { animation: none; }
+}
+
+/* =====================================================
+   POST CARDS — soft navy tiles with hover lift
+   ===================================================== */
+.archive__item {
+  background: rgba(255,255,255,.03);
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108,178,255,.55);
+  box-shadow: 0 12px 30px rgba(3,10,24,.45);
+}
+
+/* newest post gets a coral spotlight */
+.archive__item:first-of-type {
+  border-top: 3px solid #ff8e72;
+}
+
+.archive__item-teaser img { border-radius: 8px; }
+
+/* =====================================================
+   CATEGORY / TAG CHIPS — rotating pops of color
+   ===================================================== */
+.taxonomy__item {
+  border-radius: 999px;
+  padding: .15rem .65rem;
+  background: rgba(108,178,255,.12);
+  &:nth-of-type(5n+2) { background: rgba(255,142,114,.15); }
+  &:nth-of-type(5n+3) { background: rgba(122,224,195,.15); }
+  &:nth-of-type(5n+4) { background: rgba(184,167,255,.16); }
+  &:nth-of-type(5n+5) { background: rgba(255,209,102,.15); }
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn--primary { background: linear-gradient(135deg, #6cb2ff, #5a8df0); }
+.btn--light-outline {
+  color: $text-color;
+  border-color: rgba(231,238,248,.4);
+  &:hover { border-color: #ffd166; color: #ffd166; }
+}
