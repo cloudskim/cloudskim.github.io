@@ -1,0 +1,80 @@
+title: "Ka1cifer's Secret Place"
+name: "Ka1cifer"
+url: "https://cloudskim.github.io"
+repository: "cloudskim/cloudskim.github.io"
+# skin removed — colors are fully controlled by assets/css/main.scss now
+description: >-
+  A navy corner of the internet where Ka1cifer writes about code,
+  side projects, and other interesting experiments.
+
+github_username: cloudskim
+search: true
+lang: en
+
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+permalink: /:categories/:title/
+paginate: 6
+paginate_path: /page:num/
+timezone:
+
+include:
+  - _pages
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "Ka1cifer"
+  avatar : "/assets/images/bio-photo.jpg"   # add this image, or delete this line
+  bio    : "Building things, breaking things, writing about it."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://cloudskim.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cloudskim"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/k-zin-htet-87372b391/"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cloudskim"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/k-zin-htet-87372b391/"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
