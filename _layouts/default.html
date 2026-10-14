@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.subtitle | default: page.excerpt | default: site.description | strip_html | strip | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% assign ap = site.data.appearance %}
+  {% case ap.font_size %}{% when "small" %}{% assign px = 17 %}{% when "large" %}{% assign px = 23 %}{% when "xlarge" %}{% assign px = 26 %}{% else %}{% assign px = 20 %}{% endcase %}
+  <style>:root{--fs:{{ px }}px}{% if ap.font == "sans" %} .prose{font-family:var(--sans)}{% endif %}</style>
+  {% feed_meta %}
+  <script>
+    try {
+      var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t;
+      var f = localStorage.getItem('fs'); if (f) document.documentElement.style.setProperty('--fs', f + 'px');
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-head">
+    <div class="head-in">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.data.appearance.site_title | default: site.title }}</a>
+      <nav>
+        {% for item in site.nav %}<a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="on"{% endif %}>{{ item.title }}</a>{% endfor %}
+      </nav>
+      <div class="tools">
+        <button data-fs="-2" aria-label="Smaller text" title="Smaller text"><span style="font-size:.8em">A</span></button>
+        <button data-fs="2" aria-label="Larger text" title="Larger text"><span style="font-size:1.2em">A</span></button>
+        <button id="theme" aria-label="Toggle dark mode" title="Light / dark">&#9681;</button>
+      </div>
+    </div>
+  </header>
+  <main>{{ content }}</main>
+  <footer class="site-foot">
+    <div class="head-in">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}</span>
+      <span class="foot-links">{% for l in site.data.profile.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% endfor %}<a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

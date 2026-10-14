@@ -1,0 +1,21 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+<div class="wrap tags-page">
+  <h1 class="page-title">Browse by tag</h1>
+  {% assign all = site.tags | sort %}
+  <div class="chips big">
+    {% for t in all %}<a class="tag" href="#{{ t[0] | slugify }}">{{ t[0] }} <span>{{ t[1].size }}</span></a>{% endfor %}
+    <a class="tag clear" href="{{ '/tags/' | relative_url }}">Show all</a>
+  </div>
+  {% for t in all %}
+  <section class="tag-group" id="{{ t[0] | slugify }}">
+    <h2>{{ t[0] }}</h2>
+    <ul class="plain">
+      {% for post in t[1] %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: "%b %-d, %Y" }}</time></li>{% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

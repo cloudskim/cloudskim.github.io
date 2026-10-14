@@ -1,0 +1,21 @@
+# Your name, bio, links and look are edited in the CMS (or in _data/profile.yml and _data/appearance.yml).
+title: Your Name
+description: Writeups, notes and projects.
+url: "https://YOUR-USERNAME.github.io"   # your site's address
+baseurl: ""                              # leave "" for a USERNAME.github.io repo; use "/repo-name" otherwise
+
+nav:
+  - { title: Writeups, url: / }
+  - { title: Tags,     url: /tags/ }
+  - { title: Profile,  url: /about/ }
+
+# ---- You can ignore everything below ----
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:title/
+plugins:
+  - jekyll-feed
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+exclude: [README.md]

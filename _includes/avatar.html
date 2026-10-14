@@ -1,0 +1,1 @@
+{% assign av = site.data.profile.avatar %}{% if av and av != "" %}<img class="avatar {{ include.size }}" src="{{ av | relative_url }}" alt="">{% else %}<span class="avatar {{ include.size }}">{{ site.data.profile.name | slice: 0 }}</span>{% endif %}

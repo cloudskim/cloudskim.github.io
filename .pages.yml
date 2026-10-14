@@ -1,0 +1,81 @@
+media:
+  - name: images
+    label: Images
+    input: assets/images
+    output: /assets/images
+    extensions: [png, jpg, jpeg, gif, webp, svg]
+
+content:
+  - name: posts
+    label: Writeups
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, tags]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: subtitle, label: Subtitle, type: string, description: Shown under the title and on the home page }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: image, label: Cover image, type: image }
+      - { name: body, label: Writeup, type: rich-text }
+
+  - name: profile
+    label: Profile
+    type: file
+    path: _data/profile.yml
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: bio, label: Short bio (home page sidebar), type: text }
+      - { name: avatar, label: Photo, type: image }
+      - name: links
+        label: Links
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Label, type: string }
+          - { name: url, label: URL, type: string }
+      - { name: about, label: About me, type: text }
+      - { name: skills, label: Skills, type: string, list: true }
+      - name: projects
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: Link, type: string }
+          - { name: description, label: Description, type: text }
+      - name: experience
+        label: Experience
+        type: object
+        list: true
+        fields:
+          - { name: role, label: Role, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: period, label: Period, type: string }
+          - { name: description, label: Description, type: text }
+
+  - name: appearance
+    label: Look and feel
+    type: file
+    path: _data/appearance.yml
+    fields:
+      - { name: site_title, label: Site name (top left), type: string }
+      - name: font
+        label: Article font
+        type: select
+        options:
+          values:
+            - { name: serif, label: Serif (book-like) }
+            - { name: sans, label: Sans-serif (clean) }
+      - name: font_size
+        label: Default article text size
+        type: select
+        options:
+          values:
+            - { name: small, label: Small }
+            - { name: medium, label: Medium }
+            - { name: large, label: Large }
+            - { name: xlarge, label: Extra large }

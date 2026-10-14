@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="wide layout">
+  <section>
+    <h1 class="page-title">Writeups</h1>
+    {% for post in site.posts %}
+    <article class="entry">
+      <div class="entry-body">
+        <div class="when"><span>{{ post.date | date: "%b %-d, %Y" }}</span><span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span></div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.subtitle | default: post.excerpt | strip_html | strip | truncatewords: 28 }}</p>
+        {% include tags.html tags=post.tags %}
+      </div>
+      {% if post.image %}<a class="thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+    </article>
+    {% else %}
+    <p class="muted">No posts yet. Add a file to the <code>_posts</code> folder.</p>
+    {% endfor %}
+  </section>
+
+  <aside class="side">
+    {% include avatar.html size="md" %}
+    <h3>{{ site.data.profile.name }}</h3>
+    <p>{{ site.data.profile.bio }}</p>
+    <p><a href="{{ '/about/' | relative_url }}">Full profile</a></p>
+    <h4>Topics</h4>
+    <div class="chips">{% assign all = site.tags | sort %}{% for t in all %}<a class="tag" href="{{ '/tags/' | relative_url }}#{{ t[0] | slugify }}">{{ t[0] }}</a>{% endfor %}</div>
+  </aside>
+</div>

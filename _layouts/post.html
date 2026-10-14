@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="wrap">
+  <header class="post-head">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+    <div class="byline">
+      {% include avatar.html size="sm" %}
+      <div>
+        <div class="who">{{ site.data.profile.name }}</div>
+        <div class="when"><span>{{ page.date | date: "%b %-d, %Y" }}</span><span>{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span></div>
+      </div>
+    </div>
+  </header>
+  {% if page.image %}<img class="cover" src="{{ page.image | relative_url }}" alt="{{ page.title }}">{% endif %}
+  <div class="prose">{{ content }}</div>
+  <footer class="post-foot">
+    {% include tags.html tags=page.tags %}
+    <div class="adjacent">
+      {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><small>Older</small>{{ page.previous.title }}</a>{% endif %}
+      {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><small>Newer</small>{{ page.next.title }}</a>{% endif %}
+    </div>
+  </footer>
+</article>
