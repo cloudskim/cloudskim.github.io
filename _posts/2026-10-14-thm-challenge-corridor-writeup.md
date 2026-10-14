@@ -1,13 +1,13 @@
 ---
 title: THM Challenge "Corridor" writeup
-subtitle: almost lost my brain trying to understand what this question is
-  supposed to mean !
+subtitle: This was previously written on medium on April 11, 2026. Excuse my
+  rookie writing.
 tags:
   - Tryhackme
   - TryhackmeWalkthrough
 image: /assets/images/1_J2Urmnki78k_n3OZkwKsuQ.png
 ---
-It says that 5 mins “Easy” challenge, which took me like half an hour to figure it out. 
+It says that 5 mins “Easy” challenge, which took me like half an hour to figure it out.  Almost lost my brain trying to understand what this question is supposed to mean !
 
 The given question is:
 
