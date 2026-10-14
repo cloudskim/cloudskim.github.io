@@ -18,3 +18,8 @@ Because there were no laws in the Philippines against making malware at the time
 
 References:
 
+[https://open.spotify.com/album/2hIkKseum3mTUTxvPZRZeP](https://open.spotify.com/album/2hIkKseum3mTUTxvPZRZeP)
+
+[https://youtu.be/mlFxxNsExJc?si=55pJ_3KL1Oamz2oT](https://youtu.be/mlFxxNsExJc?si=55pJ_3KL1Oamz2oT)
+
+[https://medium.com/p/424c86e54b8e](https://medium.com/p/424c86e54b8e)
