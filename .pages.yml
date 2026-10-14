@@ -56,7 +56,24 @@ content:
           - { name: company, label: Company, type: string }
           - { name: period, label: Period, type: string }
           - { name: description, label: Description, type: text }
-
+            - name: education
+        label: Education
+        type: object
+        list: true
+        fields:
+          - { name: degree, label: Degree or course, type: string }
+          - { name: school, label: School, type: string }
+          - { name: period, label: Period, type: string }
+          - { name: description, label: Notes, type: text }
+      - name: certifications
+        label: Certifications
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Certification, type: string }
+          - { name: issuer, label: Issued by, type: string }
+          - { name: year, label: Year, type: string }
+          - { name: url, label: Credential link, type: string }
   - name: appearance
     label: Look and feel
     type: file
