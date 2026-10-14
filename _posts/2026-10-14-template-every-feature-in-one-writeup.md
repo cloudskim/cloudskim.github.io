@@ -62,22 +62,8 @@ For a video file you uploaded yourself, use this in code view:
 
 Use a fenced block and name the language for colouring:
 
-```bash
-
-nmap -sC -sV -oN scan.txt 10.10.10.10
-
-gobuster dir -u [http://10.10.10.10](http://10.10.10.10) -w /usr/share/wordlists/dirb/common.txt
-
 ```
-
-```python
-
-import requests
-
-r = requests.get("[http://10.10.10.10/login](http://10.10.10.10/login)", params={"user": "admin"})
-
-print(r.status_code, len(r.text))
-
+nmap -sC -sV -oN scan.txt 10.10.10.10
 ```
 
 ## 6. Quotes and callouts
