@@ -1,7 +1,7 @@
 # Your name, bio, links and look are edited in the CMS (or in _data/profile.yml and _data/appearance.yml).
-title: Your Name
+title: KZH
 description: Writeups, notes and projects.
-url: "https://YOUR-USERNAME.github.io"   # your site's address
+url: "https://cloudskim.github.io"   # your site's address
 baseurl: ""                              # leave "" for a USERNAME.github.io repo; use "/repo-name" otherwise
 
 nav:
