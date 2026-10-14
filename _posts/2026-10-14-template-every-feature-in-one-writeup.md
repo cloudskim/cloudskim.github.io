@@ -48,11 +48,7 @@ A YouTube link on its own line turns into a player. Add `?t=30` to start at 30 s
 
 Spotify links work the same way (tracks, albums, playlists, episodes). Paste the link on its own line, like this:
 
-```text
-
-[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89)
-
-```
+[[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89)](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89))
 
 For a video file you uploaded yourself, use this in code view:
 
