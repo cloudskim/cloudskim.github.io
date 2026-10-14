@@ -29,6 +29,12 @@ experience:
     period: 2026 May - 2026 August
     description: What you worked on.
 education:
-  - { degree: "B.Sc. Computer Science", school: University Name, period: 2020 to 2024, description: Optional notes, thesis or honours. }
+  - degree: B.C.Tech. (Cyber Security)
+    school: University of Information Technology Yangon, Myanmar
+    period: 2022 to 2027
+    description: Optional notes
 certifications:
-  - { name: Certification name, issuer: Issuing organisation, year: 2025, url: "https://example.com/credential" }
+  - name: Certification name
+    issuer: Issuing organisation
+    year: "2025"
+    url: https://example.com/credential
