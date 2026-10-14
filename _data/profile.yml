@@ -1,19 +1,29 @@
-name: Your Name
-tagline: Security researcher and CTF player
+name: K is documenting....
+tagline: Security Researcher and CTF player
 bio: I write up the things I break, build and learn.
-avatar: ""
 links:
-  - { name: GitHub, url: "https://github.com/YOUR-USERNAME" }
-  - { name: LinkedIn, url: "https://linkedin.com/in/YOUR-USERNAME" }
-  - { name: Email, url: "mailto:you@example.com" }
-about: |
-  Write a few sentences about yourself here: what you do, what you are learning, and what you want to be found for.
+  - name: GitHub
+    url: https://github.com/cloudskim
+  - name: LinkedIn
+    url: www.linkedin.com/in/k-zin-htet
+  - name: Email
+    url: mailto:kzinhtet210@gmail.com
+about: >
+  Write a few sentences about yourself here: what you do, what you are learning,
+  and what you want to be found for.
 skills:
   - Skill or tool one
   - Skill or tool two
   - Skill or tool three
 projects:
-  - { title: Project name, url: "https://github.com/YOUR-USERNAME/project", description: One or two sentences on what it does and what you built it with. }
-  - { title: Another project, url: "https://github.com/YOUR-USERNAME/another", description: What problem it solves. }
+  - title: Project name
+    url: https://github.com/YOUR-USERNAME/project
+    description: One or two sentences on what it does and what you built it with.
+  - title: Another project
+    url: https://github.com/YOUR-USERNAME/another
+    description: What problem it solves.
 experience:
-  - { role: Role, company: Company, period: 2024 to now, description: What you worked on. }
+  - role: Junior Security Analyst
+    company: AYA Innovation Labs @ AYA Bank PCL
+    period: 2026 May - 2026 August
+    description: What you worked on.
