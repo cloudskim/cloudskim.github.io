@@ -50,7 +50,7 @@ Spotify links work the same way (tracks, albums, playlists, episodes). Paste the
 
 ```text
 
-[https://open.spotify.com/track/YOUR_TRACK_ID](https://open.spotify.com/track/YOUR_TRACK_ID)
+[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89)
 
 ```
 
