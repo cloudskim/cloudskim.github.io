@@ -134,5 +134,20 @@ nav a.on{font-weight:700}
   .profile{flex-direction:column;align-items:flex-start}
   .adjacent{flex-direction:column}.adjacent a{max-width:none}
 }
+
+/* embeds and link cards */
 .spotify{margin:1.6em 0}
 .spotify iframe{width:100%;border:0;border-radius:12px;display:block}
+.prose a.linkcard{display:flex;gap:16px;align-items:center;margin:1.6em 0;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--soft);text-decoration:none;color:var(--fg);font:400 15px/1.4 var(--sans)}
+.prose a.linkcard:hover{border-color:var(--muted)}
+.lc-thumb{flex:none;width:96px;height:96px;border-radius:8px;background:var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;font:700 2rem var(--serif);color:var(--muted)}
+.prose .lc-thumb img{width:100%;height:100%;object-fit:cover;margin:0;border-radius:0}
+.lc-body{min-width:0;display:flex;flex-direction:column;gap:4px}
+.lc-title,.lc-desc{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.lc-title{font-size:1rem}
+.lc-desc{color:var(--muted);font-size:.88rem}
+.lc-desc:empty{display:none}
+.lc-src{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.8rem}
+.prose .lc-icon{width:16px;height:16px;margin:0;border-radius:3px;display:inline-block}
+.lc-icon[hidden]{display:none}
+@media (max-width:480px){.lc-thumb{width:72px;height:72px}}
