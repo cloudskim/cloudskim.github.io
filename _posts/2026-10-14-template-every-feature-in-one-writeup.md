@@ -22,6 +22,8 @@ Or leave only the link, and the title, description and thumbnail are looked up a
 
 [https://medium.com/@document_byK/oauth-2-0-2e135932201b](https://medium.com/@document_byK/oauth-2-0-2e135932201b)
 
+[https://canva.link/udkmbaqbmldfevk](https://canva.link/udkmbaqbmldfevk)
+
 ## 3. Images
 
 Upload images in the CMS (or put them in `assets/images/`) and add them with the image button. A plain image:
