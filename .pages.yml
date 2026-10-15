@@ -3,7 +3,7 @@ media:
     label: Images
     input: assets/images
     output: /assets/images
-    extensions: [png, jpg, jpeg, gif, webp, svg]
+    extensions: [png, jpg, jpeg, gif, webp, svg, mp4]
   - name: files
     label: Slides and PDFs
     input: assets/files

@@ -23,6 +23,7 @@
     try { localStorage.setItem('theme', next); } catch (e) {}
   });
 })();
+
 // Embeds and link cards: a paragraph that holds only a link becomes a player or a card.
 (function () {
   function player(u) {
@@ -49,6 +50,15 @@
         '" allow="encrypted-media" loading="lazy"></iframe>';
       return s;
     }
+    if (u.origin === location.origin && /\.(pptx?|ppsx|pptm|pdf)$/i.test(u.pathname)) {
+      var pdf = /\.pdf$/i.test(u.pathname), w = document.createElement('div'), name = u.pathname.split('/').pop();
+      try { name = decodeURIComponent(name); } catch (e) {}
+      w.className = 'filefig';
+      w.innerHTML = '<div class="video"><iframe loading="lazy" allowfullscreen></iframe></div><p class="file-note"><a download></a></p>';
+      w.querySelector('iframe').src = pdf ? u.href : 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(u.href);
+      var dl = w.querySelector('a'); dl.href = u.href; dl.textContent = 'Download ' + name;
+      return w;
+    }
     return null;
   }
 
@@ -67,14 +77,13 @@
     var sub = a.getAttribute('title') || '';
     var el = document.createElement('a');
     el.className = 'linkcard'; el.href = u.href; el.target = '_blank'; el.rel = 'noopener noreferrer';
-    el.innerHTML = '<span class="lc-thumb"></span><span class="lc-body"><strong class="lc-title"></strong>' +
+    el.innerHTML = '<span class="lc-thumb" hidden></span><span class="lc-body"><strong class="lc-title"></strong>' +
       '<span class="lc-desc"></span><span class="lc-src"><img class="lc-icon" alt="" hidden><span class="lc-domain"></span></span></span>';
     var thumb = el.querySelector('.lc-thumb'), title = el.querySelector('.lc-title'),
         desc = el.querySelector('.lc-desc'), icon = el.querySelector('.lc-icon');
     title.textContent = own || domain;
     desc.textContent = sub;
     el.querySelector('.lc-domain').textContent = domain;
-    thumb.textContent = domain.charAt(0).toUpperCase();
 
     function fill(d) {
       if (!d) return;
@@ -82,8 +91,8 @@
       if (!sub && d.description) desc.textContent = d.description;
       var img = d.image && d.image.url;
       if (img) {
-        var i = new Image(); i.alt = ''; i.loading = 'lazy';
-        i.onload = function () { thumb.textContent = ''; thumb.appendChild(i); };
+        var i = new Image(); i.alt = ''; i.referrerPolicy = 'no-referrer';
+        i.onload = function () { thumb.appendChild(i); thumb.hidden = false; };
         i.src = img;
       }
       var logo = d.logo && d.logo.url;

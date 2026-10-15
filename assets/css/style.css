@@ -151,3 +151,8 @@ nav a.on{font-weight:700}
 .prose .lc-icon{width:16px;height:16px;margin:0;border-radius:3px;display:inline-block}
 .lc-icon[hidden]{display:none}
 @media (max-width:480px){.lc-thumb{width:72px;height:72px}}
+
+.lc-thumb[hidden]{display:none}
+.filefig{margin:1.6em 0}
+.filefig .video{margin:0 0 .6em}
+.prose .file-note{margin:0;font:.85rem var(--sans);color:var(--muted)}
