@@ -44,15 +44,15 @@ Figure 1. Caption describing what the reader is looking at.
 
 A YouTube link on its own line turns into a player. Add `?t=30` to start at 30 seconds.
 
-[https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 Spotify links work the same way (tracks, albums, playlists, episodes). Paste the link on its own line, like this:
 
-[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89))
+https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89
 
 ## 5. Code
 
-Use a fenced block and name the language for colouring:
+Use a fenced block:
 
 ```
 nmap -sC -sV -oN scan.txt 10.10.10.10
