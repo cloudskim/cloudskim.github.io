@@ -16,5 +16,5 @@ Normalizing the usernames into various possible username patterns:
 
 "firstname+lastinitial": `awk '{print tolower($1)tolower(substr($2,1,1))}' names.txt > users_firstl.txt`
 
-`wc -l wordlist.txt`  to find the number of words in a wordlist.
+`wc -l wordlist.txt`  to find the number of words in a wordlist. 
 
