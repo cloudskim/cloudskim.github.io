@@ -54,7 +54,7 @@ For a video file you uploaded yourself, use this in code view:
 
 ```html
 
-<video controls src="/assets/Images/example_video.mp4"></video>
+<video controls src="/assets/images/example_video.mp4"></video>
 
 ```
 
