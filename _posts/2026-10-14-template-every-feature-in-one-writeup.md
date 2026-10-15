@@ -14,11 +14,7 @@ A footnote looks like this.[^1] Write the note itself at the bottom of the post.
 
 ## 2. Links
 
-A normal link inside a sentence: read the [GitHub documentation]([https://docs.github.com](https://docs.github.com)) for more.
-
-A link by itself on its own line becomes a card. Give it your own title and subtitle in quotes:
-
-[GitHub Docs]([https://docs.github.com](https://docs.github.com) "Guides and reference for everything on GitHub")
+A normal link inside a sentence: read the [GitHub documentation](https://docs.github.com) for more.
 
 Or leave only the link, and the title, description and thumbnail are looked up automatically:
 
@@ -48,7 +44,7 @@ A YouTube link on its own line turns into a player. Add `?t=30` to start at 30 s
 
 Spotify links work the same way (tracks, albums, playlists, episodes). Paste the link on its own line, like this:
 
-[[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89)](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89))
+[https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89](https://open.spotify.com/track/6Ca48UTggzmfqE45NrzDm5?si=f2bfbb0e40bf4c89))
 
 For a video file you uploaded yourself, use this in code view:
 
