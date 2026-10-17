@@ -12,24 +12,16 @@
     });
   });
 
-  // Theme button: cycles light, dark, matcha.
-  var THEMES = ['light', 'dark', 'matcha'];
+  // Light / dark toggle.
   var btn = document.getElementById('theme');
-  function current() {
-    return root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  }
-  function label() {
-    var c = current(), n = THEMES[(THEMES.indexOf(c) + 1) % THEMES.length];
-    if (btn) { btn.title = 'Theme: ' + c + '. Click for ' + n; btn.setAttribute('aria-label', btn.title); }
-  }
-  if (btn) {
-    label();
-    btn.addEventListener('click', function () {
-      var next = THEMES[(THEMES.indexOf(current()) + 1) % THEMES.length];
-      root.dataset.theme = next;
-      try { localStorage.setItem('theme', next); } catch (e) {}
-      label();
-    });
+  if (btn) btn.addEventListener('click', function () {
+    var dark = root.dataset.theme
+      ? root.dataset.theme === 'dark'
+      : matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
 })();
 
 // Embeds and link cards: a paragraph that holds only a link becomes a player or a card.
