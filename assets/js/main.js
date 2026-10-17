@@ -12,14 +12,14 @@
     });
   });
 
-  // Light / dark toggle.
+  // Cycle through light, dark, and matcha themes.
   var btn = document.getElementById('theme');
   if (btn) btn.addEventListener('click', function () {
-    var dark = root.dataset.theme
-      ? root.dataset.theme === 'dark'
-      : matchMedia('(prefers-color-scheme: dark)').matches;
-    var next = dark ? 'light' : 'dark';
+    var current = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = { light: 'dark', dark: 'matcha', matcha: 'light' }[current] || 'dark';
     root.dataset.theme = next;
+    btn.title = next.charAt(0).toUpperCase() + next.slice(1) + ' theme';
+    btn.setAttribute('aria-label', 'Switch to ' + ({ light: 'dark', dark: 'matcha', matcha: 'light' }[next]) + ' theme');
     try { localStorage.setItem('theme', next); } catch (e) {}
   });
 })();
