@@ -9,14 +9,12 @@ links:
     url: https://www.linkedin.com/in/k-zin-htet
   - name: Email
     url: mailto:kzinhtet210@gmail.com
-  - name: CV
-    url: https://drive.google.com/file/d/1ISHeJ8oAwXOrdHrIqSso1M6OT2UVGzQe/view?usp=sharing
 about: >
   Write a few sentences about yourself here: what you do, what you are learning,
   and what you want to be found for.
 skills:
+  - Skill or tool one
   - Skill or tool two
-  - Advanced proficiency in Burp Suite
   - Skill or tool three
 projects:
   - title: Project name
@@ -30,3 +28,13 @@ experience:
     company: AYA Innovation Labs @ AYA Bank PCL
     period: 2026 May - 2026 August
     description: What you worked on.
+education:
+  - degree: B.C.Tech. (Cyber Security)
+    school: University of Information Technology Yangon, Myanmar
+    period: 2022 to 2027
+    description: Optional notes
+certifications:
+  - name: Certification name
+    issuer: Issuing organisation
+    year: "2025"
+    url: https://example.com/credential
