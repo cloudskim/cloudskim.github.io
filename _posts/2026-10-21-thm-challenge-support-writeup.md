@@ -7,7 +7,7 @@ curl -i -X OPTIONS [http://10.48.176.126/](http://10.48.176.126/)
 
 info.php, /includes, /skins/default.php, 
 
-curl -si [http://10.49.187.109/](http://10.48.176.126/) -d "email=help@support.thm&password=wrongpass" | head -30
+curl -si [http://10.49.187.109/](http://10.48.176.126/) -d "email=[help@support.thm](mailto:help@support.thm)&password=wrongpass" | head -30
 
 This worked:
 
@@ -17,7 +17,7 @@ hydra -l help@support.thm -P /usr/share/wordlists/SecLists/Passwords/Common-Cred
 
 ![image.png](/assets/images/image-4.png)
 
-I found it!! The password for help@support.thm is "snoopy". So freaking exciting, and cookie value "isITuser" is MD5 hashed value of "false" for help@support.thm, so I will use MD5 hashed value for "true" and replace that in "isITuser" value. "b326b5062b2f0e69046810717534cb09", and I thought I would get admin  it went to /api.php
+I found it!! The password for [help@support.thm](mailto:help@support.thm) is "snoopy". So freaking exciting, and cookie value "isITuser" is MD5 hashed value of "false" for [help@support.thm](mailto:help@support.thm), so I will use MD5 hashed value for "true" and replace that in "isITuser" value. "b326b5062b2f0e69046810717534cb09", and I thought I would get admin  it went to /api.php
 
 ![image.png](/assets/images/image-1.png)
 
@@ -31,3 +31,4 @@ Then I know that it is not admin account, so I will go to /user/1
 
 I will try with hydra again for login
 
+/usr/share/wordlists/SecLists/Fuzzing/LFI
