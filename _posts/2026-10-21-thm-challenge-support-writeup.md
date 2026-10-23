@@ -54,7 +54,7 @@ There I can go to /user/3
 
 ![image.png](/assets/images/image-2.png)
 
-Then I know that it is not admin account, so I will go to /user/1
+Then I know that it is not admin account, so I can simply modify to "/user/1". This vulnerability is called **Insecure direct object references (IDOR)** which is a**** type of access control vulnerability that arises when an application uses user-supplied input to access objects directly.
 
 ![image.png](/assets/images/image-3.png)
 
@@ -65,5 +65,9 @@ ffuf -u "[http://10.48.170.191/?skin=FUZZ](http://10.48.170.191/?skin=FUZZ)" \
   -w /usr/share/wordlists/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt \
 
   -mr "root:x:0:0" -t 50 -o lfi_hits.json
+
+Reference:
+
+[https://portswigger.net/web-security/access-control/idor](https://portswigger.net/web-security/access-control/idor)
 
 This Github Repo is Good:  [https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
