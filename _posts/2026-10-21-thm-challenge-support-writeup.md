@@ -1,5 +1,6 @@
 ---
 title: THM Challenge "Support" Writeup
+subtitle: Supposedly "60 mins" medium challenge but took me 3 nights to complete.
 tags:
   - Tryhackme
   - TryhackmeWalkthrough
