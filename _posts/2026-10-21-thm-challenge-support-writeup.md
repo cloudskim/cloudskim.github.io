@@ -36,7 +36,7 @@ Checked the exposed endpoints and most of them are either empty. I can only see 
 
 Then I tried to login to the portal using brute force technique using hydra.
 
-I first need to guess the email. I tried the one used as the placeholder "help@support.thm" as follows.
+I first need to guess the email. I tried the one used as the placeholder "[help@support.thm](mailto:help@support.thm)" as follows.
 
 This worked:
 
@@ -54,11 +54,11 @@ There I can go to /user/3
 
 ![image.png](/assets/images/image-2.png)
 
-Then I know that it is not admin account, so I can simply modify to "/user/1". This vulnerability is called **Insecure direct object references (IDOR)** which is a**** type of access control vulnerability that arises when an application uses user-supplied input to access objects directly.
+Then I know that it is not admin account, so I can simply modify to "/user/1". This vulnerability is called **Insecure direct object references (IDOR)** which is a type of access control vulnerability that arises when an application uses user-supplied input to access objects directly.
 
 ![image.png](/assets/images/image-3.png)
 
-Here I can see the value "admin" was false for "help@support.thm" but is true for "specialadmin@support.thm". So, we have to find a way to login with that email to get admin access.
+Here I can see the value "admin" was false for "[help@support.thm](mailto:help@support.thm)" but is true for "[specialadmin@support.thm](mailto:specialadmin@support.thm)". So, we have to find a way to login with that email to get admin access.
 
 
 
