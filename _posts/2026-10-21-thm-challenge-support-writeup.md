@@ -58,7 +58,9 @@ Then I know that it is not admin account, so I can simply modify to "/user/1". T
 
 ![image.png](/assets/images/image-3.png)
 
-I will try with hydra again for login
+Here I can see the value "admin" was false for "help@support.thm" but is true for "specialadmin@support.thm". So, we have to find a way to login with that email to get admin access.
+
+
 
 ffuf -u "[http://10.48.170.191/?skin=FUZZ](http://10.48.170.191/?skin=FUZZ)" \
 
