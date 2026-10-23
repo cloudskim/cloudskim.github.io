@@ -1,6 +1,27 @@
 ---
 title: THM Challenge "Support" Writeup
+tags:
+  - Tryhackme
+  - TryhackmeWalkthrough
+  - writeups
+image: /assets/images/62a7685ca6e7ce005d3f3afe-1773827665267.png
 ---
+This walkthrough I did is on the path "Junior Penetration Tester", "" module. 
+
+The given question for this challenge is
+
+> A new internal Support Operations Platform has been deployed to assist IT and helpdesk teams. The application handles user management, internal APIs, and system-level operations. However, security was not the primary focus during development. Several features rely on user-controlled input and weak trust boundaries.
+>
+> Can you pentest the platform and escalate your access to achieve RCE on the server?
+
+The first thing I did is port scanning using nmap
+
+```
+nmap -sV <ip>
+```
+
+I found out that port 80 (http) and 22(ssh) are active.
+
 gobuster dir -u [http://10.48.176.126/](http://10.48.176.126/) -w /usr/share/seclists/Discovery/Web-Content/api/api-endpoints.txt -t 50
 
 curl -i -X OPTIONS [http://10.48.176.126/](http://10.48.176.126/)
@@ -31,7 +52,7 @@ Then I know that it is not admin account, so I will go to /user/1
 
 I will try with hydra again for login
 
-ffuf -u "http://10.48.170.191/?skin=FUZZ" \
+ffuf -u "[http://10.48.170.191/?skin=FUZZ](http://10.48.170.191/?skin=FUZZ)" \
 
   -w /usr/share/wordlists/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt \
 
