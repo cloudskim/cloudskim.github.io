@@ -20,15 +20,23 @@ The first thing I did is port scanning using nmap
 nmap -sV <ip>
 ```
 
-I found out that port 80 (http) and 22(ssh) are active.
+I found out that port 80 (http) and 22(ssh) are active. I checked the ip in the brower and saw that it is a login page for internal page for support operations.
 
-gobuster dir -u [http://10.48.176.126/](http://10.48.176.126/) -w /usr/share/seclists/Discovery/Web-Content/api/api-endpoints.txt -t 50
+![](/assets/images/image-7.png)
 
-curl -i -X OPTIONS [http://10.48.176.126/](http://10.48.176.126/)
+Before I try logging in, I tried it's exposed endpoints using this:
 
-info.php, /includes, /skins/default.php, 
+```
+gobuster dir -u http://<ip>/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 50 -x php
+```
 
-curl -si [http://10.49.187.109/](http://10.48.176.126/) -d "email=[help@support.thm](mailto:help@support.thm)&password=wrongpass" | head -30
+![image.png](/assets/images/image-9.png)
+
+Checked the exposed endpoints and most of them are either empty. I can only see info.php contents which are not that really useful.
+
+I tried other ways to see the 
+
+
 
 This worked:
 
