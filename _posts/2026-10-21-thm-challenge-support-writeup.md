@@ -34,9 +34,9 @@ gobuster dir -u http://<ip>/ -w /usr/share/wordlists/SecLists/Discovery/Web-Cont
 
 Checked the exposed endpoints and most of them are either empty. I can only see info.php contents which are not that really useful.
 
-I tried other ways to see the 
+Then I tried to login to the portal using brute force technique using hydra.
 
-
+I first need to guess the email. I tried the one used as the placeholder "help@support.thm" as follows.
 
 This worked:
 
@@ -46,7 +46,7 @@ hydra -l help@support.thm -P /usr/share/wordlists/SecLists/Passwords/Common-Cred
 
 ![image.png](/assets/images/image-4.png)
 
-I found it!! The password for [help@support.thm](mailto:help@support.thm) is "snoopy". So freaking exciting, and cookie value "isITuser" is MD5 hashed value of "false" for [help@support.thm](mailto:help@support.thm), so I will use MD5 hashed value for "true" and replace that in "isITuser" value. "b326b5062b2f0e69046810717534cb09", and I thought I would get admin  it went to /api.php
+I found that the password for [help@support.thm](mailto:help@support.thm) is "snoopy". So freaking exciting. I can now access the "api.php" and go to endpoint "/user/3". 
 
 ![image.png](/assets/images/image-1.png)
 
