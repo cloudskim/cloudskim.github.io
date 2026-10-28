@@ -12,3 +12,6 @@ I now know about sigma rules
 [https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_curl_download_direct_ip_exec.yml](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_curl_download_direct_ip_exec.yml)
 
 [https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_nltest_recon.yml](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_nltest_recon.yml)
+
+### I need to check this out too: [https://tryhackme.com/module/recent-threats](https://tryhackme.com/module/recent-threats)
+
