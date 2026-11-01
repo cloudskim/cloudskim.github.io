@@ -18,3 +18,12 @@ Normalizing the usernames into various possible username patterns:
 
 `wc -l wordlist.txt`  to find the number of words in a wordlist. 
 
+CeWL is a web crawler that scrapes words from websites and builds custom wordlists useful for password attacks.
+
+ `cewl -d 2 -m 6 --lowercase -w keywords.txt http://ip:port`
+
+- `-d 2`: Crawl depth of 2.
+- `-m 6`: Minimum word length.
+- `--lowercase`: Convert words to lowercase.
+- `-w keywords.txt`: Save output to file.
+
