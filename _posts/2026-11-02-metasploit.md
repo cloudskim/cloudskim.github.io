@@ -74,6 +74,33 @@ Metasploit uses the payload's path to tell you whether it is staged or single. T
 
 `windows/x64/shell/reverse_tcp` — The forward slash (/) between shell and reverse means this is a staged payload. A small stager connects first, then downloads the full shell stage.
 
+## Setting Up msfconsole
+
+
+
+### Becoming the postgres user
+
+```
+root@magnolia:# su postgres
+```
+
+### Creating a database user
+
+```
+postgres@magnolia:$ createuser msf_user -P
+Enter password for new role: yourmsfpassword
+Enter it again: yourmsfpassword 
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) n
+Shall the new role be allowed to create more new roles? (y/n) n
+```
+
+### Creating a database
+
+```
+postgres@magnolia:$ createdb --owner=msf_user msf_database
+```
+
 
 
 We will cover `msfvenom` in depth in the fourth room of this module. Other tools like `pattern_create` and `pattern_offset` are used in exploit development, which is beyond the scope of this Learning Path.
