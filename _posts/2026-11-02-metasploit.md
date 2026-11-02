@@ -145,7 +145,7 @@ For a targeted search, combine keywords with filters. The most useful filters fo
 
 finding directly: info exploit/windows/smb/ms17_010_eternalblue
 
-search type:auxiliary name:smb
+`search type:auxiliary name:smb` for exploiting apache specific `search type:exploit apache`
 
 info <no_from_search_result>
 
