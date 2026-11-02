@@ -105,7 +105,7 @@ pass12345
 
 login as msf_user: `psql -h 127.0.0.1 -p 5433 -U msf_user -d msf_database`
 
-`sudo apt install metasploit-framework`
+`sudo apt install metasploit-framework` 
 
 We will cover `msfvenom` in depth in the fourth room of this module. Other tools like `pattern_create` and `pattern_offset` are used in exploit development, which is beyond the scope of this Learning Path.
 
