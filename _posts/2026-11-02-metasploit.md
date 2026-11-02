@@ -76,8 +76,6 @@ Metasploit uses the payload's path to tell you whether it is staged or single. T
 
 ## Setting Up msfconsole
 
-
-
 ### Becoming the postgres user
 
 ```
@@ -101,7 +99,9 @@ Shall the new role be allowed to create more new roles? (y/n) n
 postgres@magnolia:$ createdb --owner=msf_user msf_database
 ```
 
+sudo -u postgres psql
 
+pass12345
 
 We will cover `msfvenom` in depth in the fourth room of this module. Other tools like `pattern_create` and `pattern_offset` are used in exploit development, which is beyond the scope of this Learning Path.
 
