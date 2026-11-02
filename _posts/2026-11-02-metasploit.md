@@ -109,5 +109,38 @@ login as msf_user: `psql -h 127.0.0.1 -p 5433 -U msf_user -d msf_database`
 
 ![image.png](/assets/images/image-10.png)
 
-We will cover `msfvenom` in depth in the fourth room of this module. Other tools like `pattern_create` and `pattern_offset` are used in exploit development, which is beyond the scope of this Learning Path.
+```
+msf > pg_lsclusters
+[*] exec: pg_lsclusters
 
+Ver Cluster Port Status Owner    Data directory              Log file
+18  main    5433 online postgres /var/lib/postgresql/18/main /var/log/postgresql/postgresql-18-main.log
+```
+
+nano /usr/share/metasploit-framework/config/database.yml
+
+```
+production:
+  adapter: postgresql
+  database: msf_database
+  username: msf_user
+  password: YOUR_POSTGRES_PASSWORD
+  host: 127.0.0.1
+  port: 5433
+  pool: 5
+  timeout: 5
+```
+
+
+
+&nbsp;
+
+---
+
+
+
+We will cover msfvenom in depth in the fourth room of this module. Other tools like pattern_create and pattern_offset are used in exploit development, which is beyond the scope of this Learning Path.
+
+
+
+&nbsp;
