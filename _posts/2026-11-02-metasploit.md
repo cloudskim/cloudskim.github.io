@@ -131,9 +131,23 @@ production:
   timeout: 5
 ```
 
+### Filtered search
 
+For a targeted search, combine keywords with filters. The most useful filters for day-to-day work are:
 
-&nbsp;
+**type**: Filter by module category (exploit, auxiliary, post, payload, encoder, nop, evasion)
+
+**platform**: Filter by target OS (windows, linux, osx, android, etc.)
+
+**cve**: Search by CVE identifier
+
+**name:** Match against the module's descriptive name only
+
+finding directly: info exploit/windows/smb/ms17_010_eternalblue
+
+search type:auxiliary name:smb
+
+info <no_from_search_result>
 
 ---
 
